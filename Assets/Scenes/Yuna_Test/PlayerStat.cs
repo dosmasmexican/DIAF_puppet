@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEditor;
 
 public class PlayerStat : MonoBehaviour
 {
@@ -12,9 +14,11 @@ public class PlayerStat : MonoBehaviour
     public class player
     {
         public string name;
-        public int health;
-        public int damage;
-        public int defence;
+        public int HP;
+        public int ATK;
+        public int SPD;
+        public int DEF;
+        public int STA;
     }
 
     [Serializable]
@@ -36,16 +40,18 @@ public class PlayerStat : MonoBehaviour
     void ReadCSV()
     {
         String[] data = textAssetData.text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
-        int tableSize = data.Length / 4 - 1;
+        int tableSize = data.Length / 6 - 1;
         myPlayerList.player = new player[tableSize];
 
         for (int i = 0; i < tableSize; i++)
         {
             myPlayerList.player[i] = new player();
-            myPlayerList.player[i].name = data[4 * (i + 1)];
-            myPlayerList.player[i].health = int.Parse(data[4 * (i + 1)+1]);
-            myPlayerList.player[i].damage = int.Parse(data[4 * (i + 1)+2]);
-            myPlayerList.player[i].defence = int.Parse(data[4 * (i + 1)+3]);
+            myPlayerList.player[i].name = data[6 * (i + 1)];
+            myPlayerList.player[i].HP = int.Parse(data[6 * (i + 1) + 1]);
+            myPlayerList.player[i].ATK = int.Parse(data[6 * (i + 1) + 2]);
+            myPlayerList.player[i].SPD = int.Parse(data[6 * (i + 1) + 3]);
+            myPlayerList.player[i].DEF = int.Parse(data[6 * (i + 1) + 4]);
+            myPlayerList.player[i].STA = int.Parse(data[6 * (i + 1) + 5]);
         }
     }
 }
