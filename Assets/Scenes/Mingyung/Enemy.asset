@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70f89101dbc6a7459449d1395d245c2, type: 3}
+  m_Name: Enemy
+  m_EditorClassIdentifier: 
+  EnemyStats:
+  - enemy_name: scarecrow
+    HP: 100
+    attack: 10
+    speed: 10
+    defense: 5
+    stiffness_resistance: 10
+  - enemy_name: devil
+    HP: 120
+    attack: 12
+    speed: 10
+    defense: 8
+    stiffness_resistance: 10
+  - enemy_name: monster
+    HP: 90
+    attack: 11
+    speed: 12
+    defense: 4
+    stiffness_resistance: 7
