@@ -6,9 +6,9 @@ using UnityEngine;
 public class EnemyTest 
 {
     public string enemy_name;
-    public string HP;
-    public string attack;
-    public string speed;
-    public string defense;
-    public string stiffness_resistance;
+    public int HP;
+    public int attack;
+    public int speed;
+    public int defense;
+    public int stiffness_resistance;
 }
