@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterStats
   m_EditorClassIdentifier: 
   characterName: 
-  HP: 70
+  HP: 30
   ATK: 10
   SPD: 20
   DEF: 10

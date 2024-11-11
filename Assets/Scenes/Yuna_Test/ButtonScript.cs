@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ButtonScript : MonoBehaviour
 {
     public Button myButton; 
-    public Enemy enemy;   
+    public YunaEnemy enemy;   
 
     private void Start()
     {
